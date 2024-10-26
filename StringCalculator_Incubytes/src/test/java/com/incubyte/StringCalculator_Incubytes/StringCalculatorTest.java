@@ -48,4 +48,10 @@ class StringCalculatorTest {
         assertEquals(6, calculator.add("1\n2,3"), "Should handle new lines between numbers");
     }
     
+    //4th test case
+    @Test
+    void testAddWithCustomDelimiter() {
+        assertEquals(3, calculator.add("//;\n1;2"), "Should handle custom delimiter ';' and return sum");
+    }
+    
 }
