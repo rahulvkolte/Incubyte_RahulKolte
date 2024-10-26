@@ -54,4 +54,13 @@ class StringCalculatorTest {
         assertEquals(3, calculator.add("//;\n1;2"), "Should handle custom delimiter ';' and return sum");
     }
     
+    //Final and 5th test case
+    @Test
+    void testAddWithNegativeNumbers() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculator.add("3,-4,5,-2");
+        });
+        assertEquals("Negative numbers not allowed: [-4, -2]", exception.getMessage());
+    }
+
 }
