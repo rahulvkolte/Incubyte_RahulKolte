@@ -40,4 +40,12 @@ class StringCalculatorTest {
     void testAddMultipleNumbers() {
         assertEquals(15, calculator.add("1,2,3,4,5"), "Should return the sum of multiple numbers");
     }
+    
+    
+    //3rd TEst case
+    @Test
+    void testAddNewLineBetweenNumbers() {
+        assertEquals(6, calculator.add("1\n2,3"), "Should handle new lines between numbers");
+    }
+    
 }
