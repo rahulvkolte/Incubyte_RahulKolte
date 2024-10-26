@@ -35,4 +35,9 @@ class StringCalculatorTest {
         });
         assertEquals("Invalid input: 'a' is not a valid integer.", exception.getMessage());
     }
+
+    @Test
+    void testAddMultipleNumbers() {
+        assertEquals(15, calculator.add("1,2,3,4,5"), "Should return the sum of multiple numbers");
+    }
 }
